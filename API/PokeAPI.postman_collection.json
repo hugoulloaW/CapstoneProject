@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "f056e978-1391-47ab-9522-68e04c173f04",
+		"name": "PokeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19232891"
+	},
+	"item": [
+		{
+			"name": "Pokedex",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();",
+							"pm.environment.set(\"pokemon\", jsonData.results[3].url);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pokemon",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Pokemon first move\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.moves[0].move.name).to.eql(\"mega-punch\");",
+							"});",
+							"",
+							"",
+							"let jsonData = pm.response.json();",
+							"pm.environment.set(\"move\", jsonData.moves[0].move.url);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{pokemon}}",
+					"host": [
+						"{{pokemon}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon Move",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Learned by Pokemon\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.learned_by_pokemon[0].name).to.eql(\"charmander\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/move/{{move}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"move",
+						"{{move}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Response time is less than 700ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(700);",
+					"});",
+					"",
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					""
+				]
+			}
+		}
+	]
+}
