@@ -6,7 +6,7 @@
   "scripts": {
     "test": "testcafe chrome:headless ./FRONT/tests/",
     "test-backup": "testcafe chrome ./tests/ --reporter html:test_results/resultados.html",
-    "test-backend": "newman run PokeAPI.postman_collection.json -e POKEAPI-ENV.postman_environment.json"
+    "test-backend": "newman run ./API/PokeAPI.postman_collection.json -e ./API/POKEAPI-ENV.postman_environment.json"
   },
   "keywords": [],
   "author": "",
