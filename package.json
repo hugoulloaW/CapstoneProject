@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./tests/ --reporter html:test_results/resultados.html"
+    "test": "testcafe chrome:headless ./FRONT/tests/",
+    "test-backup":"testcafe chrome ./tests/ --reporter html:test_results/resultados.html"
   },
   "keywords": [],
   "author": "",

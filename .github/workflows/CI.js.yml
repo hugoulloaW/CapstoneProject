@@ -5,7 +5,16 @@ on:
     branches:
     - 'main'
     
-
+env:
+  URL: "${{ secrets.URL }}"
+  USERNAME: "${{ secrets.USERNAME }}"
+  PASSWORD: "${{ secrets.PASSWORD }}"
+  BADUSERNAME: "${{ secrets.USERNAME }}"
+  BADPASSWORD: "${{ secrets.BADPASSWORD }}"
+  FIRSTNAME: "${{ secrets.FIRSTNAME }}"
+  LASTNAME: "${{ secrets.LASTNAME }}"
+  ZIPCODE: "${{ secrets.ZIPCODE }}"
+  
 
 jobs:
   testcafe:

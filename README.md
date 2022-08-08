@@ -1,6 +1,6 @@
 # CapstoneProject
 # Author: Hugo Ulloa
-Capstone Project  QA Automation Bootcamp 
+Capstone Project  QA Automation Bootcamp.
 
 ### Pre-requisites
 1. Node.js (latest)
