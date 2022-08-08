@@ -88,12 +88,8 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/move/{{move}}",
+					"raw": "{{move}}",
 					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"move",
 						"{{move}}"
 					]
 				}
