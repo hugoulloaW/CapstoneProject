@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./test/",
+    "test": "testcafe chrome:headless ./test/",
     "test-backup":"testcafe chrome ./tests/ --reporter html:test_results/resultados.html"
   },
   "keywords": [],
