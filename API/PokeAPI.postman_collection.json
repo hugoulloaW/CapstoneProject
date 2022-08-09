@@ -44,9 +44,8 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Pokemon first move\", function () {",
-							"    let movement = pm.variables.get('move')",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.moves[0].move.name).to.eql(movement);",
+							"       var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.moves[0].move.name).to.eql(\"mega-punch\");",
 							"    ",
 							"});",
 							"",
