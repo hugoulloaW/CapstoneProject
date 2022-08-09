@@ -92,6 +92,7 @@ api/capstoneEnviroment.postman_environment.json
 ### Scripts
 | Script Name|Description|
 |----------|:-------------|
+| npm run test | Run all test from the directory ./tests/
 | test-login-chrome |Runs all tests from *Login feature tests* fixture on a Chrome instance.|
 | test-addTasks-chrome |Runs all tests from *Add new task* fixture on a Chrome instance.|
 |test-addProject-chrome|Runs all tests from *Add new project* fixture on a Chrome instance.|

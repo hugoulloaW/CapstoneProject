@@ -14,7 +14,8 @@
 					"script": {
 						"exec": [
 							"let jsonData = pm.response.json();",
-							"pm.environment.set(\"pokemon\", jsonData.results[3].url);"
+							"pm.environment.set(\"pokemon\", jsonData.results[3].name);",
+							"pm.environment.set(\"pokemon_url\", jsonData.results[3].url);"
 						],
 						"type": "text/javascript"
 					}
@@ -44,12 +45,22 @@
 						"exec": [
 							"pm.test(\"Pokemon first move\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.moves[0].move.name).to.eql(\"mega-punch\");",
+							"    pm.expect(jsonData.moves[0].move.name).to.eql(pm.variables.get('move'));",
 							"});",
 							"",
 							"",
 							"let jsonData = pm.response.json();",
-							"pm.environment.set(\"move\", jsonData.moves[0].move.url);",
+							"pm.environment.set(\"move\", jsonData.moves[0].move.name);",
+							"pm.environment.set(\"move_url\", jsonData.moves[0].move.url)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
 							""
 						],
 						"type": "text/javascript"
@@ -60,9 +71,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{pokemon}}",
+					"raw": "{{pokemon_url}}",
 					"host": [
-						"{{pokemon}}"
+						"{{pokemon_url}}"
 					]
 				}
 			},
@@ -77,7 +88,7 @@
 						"exec": [
 							"pm.test(\"Learned by Pokemon\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.learned_by_pokemon[0].name).to.eql(\"charmander\");",
+							"    pm.expect(jsonData.learned_by_pokemon[0].name).to.eql(pm.variables.get('pokemon'));",
 							"});"
 						],
 						"type": "text/javascript"
@@ -88,9 +99,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{move}}",
+					"raw": "{{move_url}}",
 					"host": [
-						"{{move}}"
+						"{{move_url}}"
 					]
 				}
 			},
