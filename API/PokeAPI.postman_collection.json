@@ -91,7 +91,7 @@
 						"exec": [
 							"pm.test(\"Learned by Pokemon\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.learned_by_pokemon[0].name).to.eql(pm.variables.get('pokemon'));",
+							"    pm.expect(jsonData.learned_by_pokemon[0].name).to.eql(\"charmander\");",
 							"});"
 						],
 						"type": "text/javascript"
