@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Pokedex",
+			"name": "Full list of Pokemon",
 			"event": [
 				{
 					"listen": "test",
@@ -36,7 +36,7 @@
 			"response": []
 		},
 		{
-			"name": "Pokemon",
+			"name": "All Info of Favorite Pokemon",
 			"event": [
 				{
 					"listen": "test",
@@ -69,7 +69,7 @@
 			"response": []
 		},
 		{
-			"name": "Pokemon Move",
+			"name": "Pokemon First Move",
 			"event": [
 				{
 					"listen": "test",
