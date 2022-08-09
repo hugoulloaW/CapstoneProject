@@ -17,7 +17,7 @@ env:
   
 
 jobs:
-  testcafe:
+  E2E:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -26,4 +26,13 @@ jobs:
         node-version: '17.x'
     - run: npm install
     - run: npm run test
+    
+
+  API-testing:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '17.x'
     - run: npm run test-backend
