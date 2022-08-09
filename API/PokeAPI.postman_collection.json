@@ -44,8 +44,10 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Pokemon first move\", function () {",
+							"    let movement = pm.variables.get('move')",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.moves[0].move.name).to.eql(pm.variables.get('move'));",
+							"    pm.expect(jsonData.moves[0].move.name).to.eql(movement);",
+							"    ",
 							"});",
 							"",
 							"",
@@ -53,7 +55,7 @@
 							"pm.environment.set(\"move\", jsonData.moves[0].move.name);",
 							"pm.environment.set(\"move_url\", jsonData.moves[0].move.url)",
 							"",
-							"console.log(pm.variables.get('move'))"
+							""
 						],
 						"type": "text/javascript"
 					}
