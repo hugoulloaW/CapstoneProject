@@ -52,7 +52,8 @@
 							"let jsonData = pm.response.json();",
 							"pm.environment.set(\"move\", jsonData.moves[0].move.name);",
 							"pm.environment.set(\"move_url\", jsonData.moves[0].move.url)",
-							""
+							"",
+							"console.log(pm.variables.get('move'))"
 						],
 						"type": "text/javascript"
 					}
