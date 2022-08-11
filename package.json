@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "testcafe chrome:headless ./FRONT/tests/",
+    "test-login": "testcafe chrome:headless ./FRONT/tests/login-test-pom.js",
+    "test-navigation": "testcafe chrome:headless ./FRONT/tests/navigation-pom.js",
+    "test-products": "testcafe chrome:headless ./FRONT/tests/product-test-pom.js",
+    "test-smoke": "testcafe chrome:headless ./FRONT/tests/smoke-test.js",
     "test-backup": "testcafe chrome ./tests/ --reporter html:test_results/resultados.html",
     "test-backend": "newman run ./API/PokeAPI.postman_collection.json -e ./API/POKEAPI-ENV.postman_environment.json"
   },

@@ -56,8 +56,14 @@ cd capstoneProj
 ```
 3. Create a *.env* file with the following variables:
 ```
-EMAIL = a_valid_email@email.com
-PASSWORD = a_valid_password
+URL=https://www.saucedemo.com/
+USERNAME=standard_user
+PASSWORD=secret_sauce
+BADUSERNAME=locked_out_user
+BADPASSWORD=scrt_sauce
+FIRSTNAME=John
+LASTNAME=Doe
+ZIPCODE=90065
 ```
 4. Run:
 ```
@@ -83,23 +89,18 @@ npm install
 1. Go to the api folder and onto the json file.
 ```
 api/capstoneEnviroment.postman_environment.json
-```
-2. Modify the following line:
-```
-"value": "your_own_token",
+
 ```
 
 ### Scripts
 | Script Name|Description|
 |----------|:-------------|
 | npm run test | Run all test from the directory ./tests/
-| test-login-chrome |Runs all tests from *Login feature tests* fixture on a Chrome instance.|
-| test-addTasks-chrome |Runs all tests from *Add new task* fixture on a Chrome instance.|
-|test-addProject-chrome|Runs all tests from *Add new project* fixture on a Chrome instance.|
-|test-login-headless|Runs all tests from *Login feature tests* fixture in parallel on Chrome and Firefox instances using headless mode.|   
-|test-all-chrome|Runs all tests on a Chrome instance.|  
-|test-allReport-chrome|Runs all tests on a Chrome instance generating an HTML Test Report.|   
-|test-smoke-chrome|Run all smoke tests on a Chrome instance.|  
-|eslint| Run Eslint|
-|api-newman-tests| Run Api tests using Newman and Postman|
+| test-login | Runs all tests from *Login feature tests* fixture on a Chrome instance.|
+| test-navigation | Runs all tests from *Navigation feature tests* fixture on a Chrome instance.|
+|test-products | Runs all tests from *Products feature tests* fixture on a Chrome instance.|
+|test-smoke | Run all smoke tests on a Chrome instance.|   
+|test-backend | Run Api tests using Newman and Postman|  
+|test-backup | Runs all tests on a Chrome instance generating an HTML Test Report.|   
+
 
