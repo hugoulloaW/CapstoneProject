@@ -12,15 +12,15 @@ Capstone Project for the QA Automation Bootcamp of Sauce Demo Page and PokeAPI, 
     -[Project Setup](#project-setup)
 -[Tests](#tests)
     -[API Testing](#API-testing)
-        -[GET test](#get-test)
         -[Backend test](#backend-test)
     -[Front-end Testing](#frontend-testing)
         -[Login test](#login-test)
         -[Navigation test](#navigation-test)
         -[Product test](#product-test)
         -[Smoke test](#smoke-test)
-    -[Scripts](#scripts)
     -[Linting](#linting)
+    -[Scripts](#scripts)
+    
 
 
 ## Introduction
@@ -119,20 +119,39 @@ API/PokeAPI.postman_collection.json -e API/POKEAPI-ENV.postman_enviroment.js
 
 
 ## Tests
-S
+Using diverse frameworks, API and Front end testing where written, according to the instructions provided from Academy. 
 
 ## API Testing
-### GET test
+The collection where build with Postman, to later make use of Newman for automation. 
+
+
 ### Backend test
+For this tests, we interact with the {Pokemon API}(https://pokeapi.co/) choosing the following endpoints from the list of task:
+1. Favorite Pokemon
+2. Pick the first move
+3. Search all information from that move and validate "Learned_by_pokemon"
+4. Use the move as a validation.
+5. Evaluate HTTP status code accordingly
+6. Validate response time under 700ms
+
+3 GET request where made, the first one to fully obtain the whole "Pokedex" (full list of pokemons) where we can take the favorite pokemon as an enviroment variable, then we obtain the full information of that pokemon, selecting the first move and making it an enviroment variable, and last the full information of that move, validating that our favorite pokemon can learn that move. 
+
 ## Front-end Testing
+Using the fundamentals of Page Object Model and applying the best practices of Front End Automation we built these tests in testcafe. 
+
 ### Login test
+
+
 ### Navigation test
+
+
 ### Product test
+
+
 ### Smoke test 
-## Scripts
+
+
 ## Linting
-
-
 
 
 ### Scripts
