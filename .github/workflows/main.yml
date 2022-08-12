@@ -7,7 +7,7 @@ on: # event list
     branches:
       - 'main'
 env: # environment variables (available in any part of the action)
-  NODE_VERSION: 16
+  NODE_VERSION: '17.x'
 
 jobs: # list of things to do
   linting:
@@ -21,9 +21,6 @@ jobs: # list of things to do
 
       - name: Code Checkout
         uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm ci
 
       - name: Code Linting
         run: npm run lint
