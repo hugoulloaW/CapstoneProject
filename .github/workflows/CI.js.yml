@@ -36,6 +36,18 @@ jobs:
       with:
         node-version: '17.x'
     - run: npm run test-backend
+    
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ESLint (JS/TS) Action 
+  # You may pin to the exact commit or the version.
+  # uses: iCrawl/action-eslint@ff2a58dcbc1aaec51815d58e8bf70962c4f2b557
+  uses: iCrawl/action-eslint@v1
+  with:
+    # Custom glob to overwrite which files to lint.
+    custom-glob: # optional, default is src
+    
 
   
  
