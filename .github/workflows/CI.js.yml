@@ -37,12 +37,7 @@ jobs:
         node-version: '17.x'
     - run: npm run test-backend
     
-  Lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: ESLint (JS/TS) Action 
-    -uses: iCrawl/action-eslint@v1
-      
+
 
   
  
