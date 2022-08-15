@@ -140,23 +140,24 @@ For this tests, we interact with the {Pokemon API}(https://pokeapi.co/) choosing
 Using the fundamentals of Page Object Model and applying the best practices of Front End Automation we built these tests in testcafe. 
 
 ### Login test
-
+Besides the succesfull login, there are 3 other test scenarios where we need to test unsuccessfull login, without ussername, without password and with a typo in the username and password. This tests should be consider as succesfull when the login page showns the error message. 
 
 ### Navigation test
-
+This test is made to corroborate that the navigation between login, products page (home) and cart page is correct, validating the ".title" exists in these pages.
 
 ### Product test
-
+Here are two test, the first one allows the user add a product to the cart page. This test is validated with the item being added to the cart. The second test validates that the item selected is the same from the homepage, validating the information of that item. 
 
 ### Smoke test 
-
+This test is made to ensure the correct function of the page, validating that you can make a purchase from the saucedemo page. It validates the login, selecting a product from the homepage, then the cart page where you can procede the checkout process, validating the information between pages and the checkout process is complete, closing with the logout process. 
 
 ## Linting
-
+In the .yml file, before runing the test, firts runs a lint checkout of the code for the ./FRONT directory, where resides most of the code writen. This process ensures that the code complies with the best practices fromo JavaScript.
 
 ### Scripts
 | Script Name|Description|
 |----------|:-------------|
+| npm run lint | Runs a test in the code from the directory ./FRONT/ |
 | npm run test | Run all test from the directory ./tests/
 | test-login | Runs all tests from *Login feature tests* fixture on a Chrome instance.|
 | test-navigation | Runs all tests from *Navigation feature tests* fixture on a Chrome instance.|
