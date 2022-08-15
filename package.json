@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:js": "eslint ./API/ ./FRONT/ ",
-    "lint": "npm run lint:js",
+    "eslint": "./node_modules/.bin/eslint ./FRONT/",
+    "lint": "npm run eslint",
     "test": "testcafe chrome:headless ./FRONT/tests/",
     "test-login": "testcafe chrome:headless ./FRONT/tests/login-test-pom.js",
     "test-navigation": "testcafe chrome:headless ./FRONT/tests/navigation-pom.js",
