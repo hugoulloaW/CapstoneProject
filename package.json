@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:js": "eslint src/**/*.js",
+    "lint:js": "eslint ./API/ ./FRONT/ ",
     "lint": "npm run lint:js",
     "test": "testcafe chrome:headless ./FRONT/tests/",
     "test-login": "testcafe chrome:headless ./FRONT/tests/login-test-pom.js",
