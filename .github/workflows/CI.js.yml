@@ -25,6 +25,7 @@ jobs:
       with:
         node-version: '17.x'
     - run: npm install
+    - run: npm run eslint
     - run: npm run test
    
     
