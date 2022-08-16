@@ -13,7 +13,7 @@ Capstone Project for the QA Automation Bootcamp of Sauce Demo Page and PokeAPI, 
 -[Tests](#tests)
     -[API Testing](#API-testing)
         -[Backend test](#backend-test)
-    -[Front-end Testing](#frontend-testing)
+    -[Front-end Testing](#front-end-testing)
         -[Login test](#login-test)
         -[Navigation test](#navigation-test)
         -[Product test](#product-test)
