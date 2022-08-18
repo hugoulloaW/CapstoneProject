@@ -8,8 +8,9 @@ class CheckoutComplete {
   }
 
   async checkoutProcessComplete () {
-    await t.expect(this.checkoutCompleteTitle.exists).ok()
-    await t.expect(this.completeOrderText.exists).ok()
+    await t
+      .expect(this.checkoutCompleteTitle.exists).ok()
+      .expect(this.completeOrderText.exists).ok()
   }
 
   async backHome () {
