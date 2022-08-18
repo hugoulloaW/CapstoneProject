@@ -17,19 +17,22 @@ class LoginPage {
   // se declara un metodo "submitloginform" que va a especificar todas las acciones del método, como typetex, click etc...
   // el método recibe dos parámetros con los que va a trabajar;
   async submitLoginForm (username, password) {
-    await t.typeText(this.userField, username)
-    await t.typeText(this.passwordField, password)
-    await t.click(this.loginButton)
+    await t
+      .typeText(this.userField, username)
+      .typeText(this.passwordField, password)
+      .click(this.loginButton)
   }
 
   async submitForm (username) {
-    await t.typeText(this.userField, username)
-    await t.click(this.loginButton)
+    await t
+      .typeText(this.userField, username)
+      .click(this.loginButton)
   }
 
   async submitFormPass (password) {
-    await t.typeText(this.passwordField, password)
-    await t.click(this.loginButton)
+    await t
+      .typeText(this.passwordField, password)
+      .click(this.loginButton)
   }
 
   async logoHomeExist () {

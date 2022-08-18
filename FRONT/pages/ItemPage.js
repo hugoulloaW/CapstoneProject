@@ -9,9 +9,10 @@ class ItemPage {
   }
 
   async correctItem () {
-    await t.expect(this.itemName.exists).ok()
-    await t.expect(this.itemDescription.exists).ok()
-    await t.expect(this.itemPrice.exists).ok()
+    await t
+      .expect(this.itemName.exists).ok()
+      .expect(this.itemDescription.exists).ok()
+      .expect(this.itemPrice.exists).ok()
   }
 }
 export default new ItemPage()

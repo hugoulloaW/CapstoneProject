@@ -9,10 +9,11 @@ class CheckoutPage {
   }
 
   async checkoutProcess () {
-    await t.expect(this.checkoutTitle.exists).ok()
-    await t.expect(this.checkoutItemName.exists).ok()
-    await t.expect(this.paymentSummary.exists).ok()
-    await t.click(this.finishButton)
+    await t
+      .expect(this.checkoutTitle.exists).ok()
+      .expect(this.checkoutItemName.exists).ok()
+      .expect(this.paymentSummary.exists).ok()
+      .click(this.finishButton)
   }
 }
 export default new CheckoutPage()

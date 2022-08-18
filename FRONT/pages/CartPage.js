@@ -9,9 +9,10 @@ class CartPage {
   }
 
   async validateProduct () {
-    await t.expect(this.cartTitle.exists).ok()
-    await t.expect(this.itemName.exists).ok()
-    await t.expect(this.itemDescription.exists).ok()
+    await t
+      .expect(this.cartTitle.exists).ok()
+      .expect(this.itemName.exists).ok()
+      .expect(this.itemDescription.exists).ok()
   }
 
   async cartTitleExist () {

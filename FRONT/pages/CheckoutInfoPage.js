@@ -10,11 +10,12 @@ class CheckoutInfoPage {
   }
 
   async fillCheckoutInfo (firstName, lastName, postalCode) {
-    await t.typeText(this.firstNameField, firstName)
-    await t.typeText(this.lastNameField, lastName)
+    await t
+      .typeText(this.firstNameField, firstName)
+      .typeText(this.lastNameField, lastName)
     // eslint-disable-next-line no-undef
-    await t.typeText(this.zipcodeField, postalCode)
-    await t.click(this.continueButton)
+      .typeText(this.zipcodeField, postalCode)
+      .click(this.continueButton)
   }
 
   async checkoutInfoExist () {

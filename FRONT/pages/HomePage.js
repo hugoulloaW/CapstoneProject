@@ -11,9 +11,10 @@ class HomePage {
   }
 
   async addToCart () {
-    await t.click(this.addToCartJacketOption)
-    await t.expect(this.cartButton.exists).ok()
-    await t.click(this.cartButton)
+    await t
+      .click(this.addToCartJacketOption)
+      .expect(this.cartButton.exists).ok()
+      .click(this.cartButton)
   }
 
   async selectItem () {
@@ -25,8 +26,9 @@ class HomePage {
   }
 
   async logoutHome () {
-    await t.click(this.menuButton)
-    await t.click(this.logoutButton)
+    await t
+      .click(this.menuButton)
+      .click(this.logoutButton)
   }
 }
 
