@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import { URLS, CREDENTIALS, CHECKOUT_INFO } from '../data/Constants'
+import { URLS, CHECKOUT_INFO } from '../data/Constants'
+import { STANDART_USER } from '../data/Roles'
 import LoginPage from '../pages/LoginPage'
 import HomePage from '../pages/HomePage'
 import CheckoutPage from '../pages/CheckoutPage'
@@ -11,7 +12,7 @@ fixture('Smoke Test')
   .page`${URLS.LOGIN_URL}`
 
 test('Smoke test for the Swag Lab Website', async t => {
-  await LoginPage.submitLoginForm(CREDENTIALS.STANDART_USER.USERNAME, CREDENTIALS.STANDART_USER.PASSWORD)
+  await t.useRole(STANDART_USER)
   await HomePage.mainTitleExist()
   await HomePage.addToCart()
   await CartPage.cartTitleExist()
