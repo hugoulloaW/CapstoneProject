@@ -10,9 +10,10 @@ import CartPage from '../pages/CartPage'
 
 fixture('Smoke Test')
   .page`${URLS.LOGIN_URL}`
-
+  .beforeEach(async t => {
+    await t.useRole(STANDART_USER)
+  })
 test('Smoke test for the Swag Lab Website', async t => {
-  await t.useRole(STANDART_USER)
   await HomePage.mainTitleExist()
   await HomePage.addToCart()
   await CartPage.cartTitleExist()
