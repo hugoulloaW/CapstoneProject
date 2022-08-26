@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
-import { URLS, CREDENTIALS } from '../data/Constants'
-import LoginPage from '../pages/LoginPage'
+import { URLS } from '../data/Constants'
+import { STANDART_USER } from '../data/Roles'
 import HomePage from '../pages/HomePage'
 import CartPage from '../pages/CartPage'
 import ItemPage from '../pages/ItemPage'
@@ -13,7 +13,7 @@ fixture('products feature')
   .page`${URLS.LOGIN_URL}`
 // Los hooks (beforeeach y aftereach) es el codigo que se ejecuta para preparar el test o al finalizar el test.
   .beforeEach(async t => (
-    await LoginPage.submitLoginForm(CREDENTIALS.STANDART_USER.USERNAME, CREDENTIALS.STANDART_USER.PASSWORD)
+    await t.useRole(STANDART_USER)
   ))
 // estructura de los test (cada prueba debe ser individualmente) ".only" nos indica que es la única que se va a correr
 test('as a user i must be able to add a product into the shopping cart', async t => {
