@@ -3,9 +3,12 @@ import dotenv from 'dotenv'
 dotenv.config()
 // se definió un arreglo URLS para almacenar los url que se pudieran presentar
 export const URLS = {
-  LOGIN_URL: process.env.URL
+  LOGIN_URL: process.env.URL,
+  HOMEPAGE_URL: process.env.URLINVENTORY,
+  CART_URL: process.env.URLCART
+
 }
-// se dinió un arreglo CREDENTIALS para almacenar el usuario y contraseña
+// se definió un arreglo CREDENTIALS para almacenar el usuario y contraseña
 export const CREDENTIALS = {
   STANDART_USER: {
     USERNAME: process.env.USERNAME,

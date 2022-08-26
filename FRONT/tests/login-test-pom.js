@@ -3,6 +3,7 @@
 import { URLS, CREDENTIALS } from '../data/Constants'
 import LoginPage from '../pages/LoginPage'
 import HomePage from '../pages/HomePage'
+import { STANDART_USER } from '../data/Roles'
 
 // fixture setea el ambiente de pruebas
 fixture('login fixture with pom')
@@ -12,7 +13,7 @@ fixture('login fixture with pom')
 test('login succesfull', async t => {
   // mandamos llamar el método "submitloginform" que viene de la pagina "loginpage", enviando dos parámetros que necesita
   // credentials accede al arreglo standart user del data provider llamado constanst, accediendo al parametro username y/o passwords.
-  await LoginPage.submitLoginForm(CREDENTIALS.STANDART_USER.USERNAME, CREDENTIALS.STANDART_USER.PASSWORD)
+  await t.useRole(STANDART_USER)
   // mandamos llamar el objeto "maintitle" que proviene de la pagina "homepage".
   await t.expect(HomePage.mainTitle.exists).ok()
 })
